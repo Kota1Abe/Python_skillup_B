@@ -8,4 +8,4 @@ curry = int(args[2])
 
 Earnings = (chiken * 760) + (curry * 850)
 
-print(Earnings)
+print(Earnings, end="")
