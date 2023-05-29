@@ -12,7 +12,7 @@ class Make_transport(Base):
 def main(args):
 
     Base.metadata.create_all(bind=ENGINE)
-
+    
 if __name__=="__main__":
     main(sys.argv)
     
