@@ -5,7 +5,7 @@ from database import session
 from transtable import Transport
 from datetime import datetime
 
-#引数に設定した値を表に登録
+#引数に設定した値を表に登録する関数を作成
 def insert_transport():
     date = args[1]
     departure = args[2]
@@ -13,9 +13,14 @@ def insert_transport():
     via = args[4]
     amount = int(args[5])
 
+    #date型に変換
     dt = datetime.strptime(date, "%Y%m%d")
+
+    #連番するためにテーブルの行をcount
     seq = session.query(Transport).count()
     date = dt
+
+    #表に登録
     transport = Transport(
         date = date,
         seq = seq + 1,
@@ -33,4 +38,5 @@ def insert_transport():
     except:
         print("交通費精算テーブルを登録できませんでした")
 
+#関数の呼びだし
 insert_transport()
