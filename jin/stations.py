@@ -7,7 +7,7 @@ class Stations(Base):
     __tablename__ = "stations"
     st_seq = Column("seq", Integer,primary_key = True)
     st_name = Column("name",VARCHAR(20))
-    st_kilo = Column("kilo",DECIMAL)
+    st_kilo = Column("kilo",DECIMAL(6,2))
 def main(args):
     """
     メイン関数
