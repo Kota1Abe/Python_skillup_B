@@ -11,7 +11,7 @@ class Transport_make(Base):
     arrival=Column("arrival",String(20)) #到着地
     via=Column("via",String(40)) #経由/利用交通機関
     amount=Column("amount",Integer) #金額
-
+    
 def main(args):
 
     Base.metadata.create_all(bind=ENGINE)
